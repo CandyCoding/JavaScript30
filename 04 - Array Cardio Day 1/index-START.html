@@ -107,8 +107,10 @@ let sortByLastName = function (names) {
     // Sum up the instances of each of these
     const data = ['car', 'car', 'truck', 'truck', 'bike', 'walk', 'car', 'van', 'bike', 'walk', 'car', 'van', 'car', 'truck' ];
   let sumUp = function(vehicles) {
-    return vehicles.reduce((accumulator,currentValue) => accumulator [item] + currentValue,{})
+    return vehicles.reduce((accumulator,vehicle) => {accumulator [vehicle] = (accumulator[vehicle] || 0) +1;
+    return accumulator}, {})
   }
+  console.log(sumUp(data))
   </script>
 </body>
 </html>
